@@ -1,0 +1,398 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    color: #ecf0f1;
+}
+header {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 0.5em 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+footer{
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+ text-align: center;
+}
+.header-container {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header-container img {
+    height: 60px;
+    width: 100px;
+    border-radius: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+nav a:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+.tabs {
+    display: flex;
+    cursor: pointer;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #34495e;
+    border-bottom: 1px solid #ddd;
+}
+.tab {
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+    background-color: #2980b9;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+.tab.active {
+    background-color: #1abc9c;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.tab:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05);
+}
+.tab-content {
+    display: none;
+    padding: 1em;
+    background-color: #34495e;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: -1px;
+}
+.tab-content.active {
+    display: block;
+}
+.portada {
+    background: url('portada_principal.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+    border-bottom: 1px solid #ddd;
+    animation: fadeIn 2s ease-in-out;
+}
+.portada h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.portada p {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.info-seccion {
+    margin: 2em 1em;
+    padding: 2em;
+    background-color: #fff;
+    color: #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    animation: slideInUp 1s ease-in-out;
+}
+.info-seccion h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #2c3e50;
+}
+.info-seccion p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+.catalogo {
+    background-color: #2c3e50;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.catalogo img {
+    max-width: 20%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+.catalogo img:hover {
+    transform: scale(1.05);
+}
+.catalogo button {
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    margin-top: 1em;
+    
+}
+.catalogo button:hover {
+    background-color: #ffca28;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+    
+}
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+.producto {
+    background-color: #2c3e50;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: calc(33.333% - 2em);
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.producto img {
+    max-width: 60%;
+    border-radius: 8px;
+}
+.producto button {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+.producto button:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+.anuncio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(30px);
+}
+.anuncio.show {
+    transform: translateY(0);
+}
+.anuncio button {
+    background-color: #fff;
+    color: #ff5722;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.anuncio button:hover {
+    background-color: #f4f4f4;
+    transform: scale(1.05);
+}
+.subcatalogo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #34495e;
+    padding: 1em;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+.subcatalogo.open {
+    max-height: 1000px; /* Ajustar según la cantidad de productos */
+}
+.info-producto {
+    display: none;
+    background-color: #34495e;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+    color: #ecf0f1;
+    position: relative;
+}
+.info-producto.active {
+    display: block;
+}
+
+.slider{
+    width: 200px;
+    height: 160px;
+    overflow: hidden;
+    background-color: #2c3e50;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider ul{
+    display: flex;
+    animation:cambio 20s infinite
+    alternate linear;
+    width: 400%;
+    
+}
+
+.slider li{
+    width: 50%;
+    list-style: none;
+}
+
+.slider img{
+    width: 60%;
+    height: 100%;
+    border-radius: 8px;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+
+}
+
+.contactanos{
+    animation: fadeIn 2s ease-in-out;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contactanos a {
+    color: #2980b9;
+}
+
+.iconos img{
+width: 30px;
+height: 30px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .tab-content, .info-seccion {
+        margin: 1em;
+    }
+    .producto {
+        width: calc(50% - 2em);
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+    .tab {
+        border-bottom: 1px solid #ddd;
+    }
+    .tab-content {
+        padding: 0.5em;
+    }
+    .producto {
+        width: calc(100% - 2em);
+    }
+    .catalogo {
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 1em;
+        flex-direction: column;
+    }
+    nav a {
+        margin-bottom: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .portada h1 {
+        font-size: 2em;
+    }
+    .portada p {
+        font-size: 1em;
+    }
+    .info-seccion h2 {
+        font-size: 1.5em;
+    }
+    .info-seccion p {
+        font-size: 0.9em;
+    }
+    .tab {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+    .producto {
+        width: calc(100% - 2em);
+        margin: 0.5em 0;
+    }
+    .anuncio {
+        bottom: 10px;
+        right: 10px;
+    }
+}

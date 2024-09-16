@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online TDA</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+
+<script src="Archivo.js"></script>
+
+<header>
+    <div class="header-container">
+        <h1>Tienda Online</h1>
+        <img src="Imagenes/TDA.jpg" alt="Logo Tienda Online TDA">
+    </div>
+</header>
+
+<div class="tabs">
+    <div class="tab active" onclick="openTab('inicio')">Inicio</div>
+    <div class="tab" onclick="openTab('productos')">Productos</div>
+    <div class="tab" onclick="openTab('mas-informacion')">Más Información</div>
+    <div class="tab" onclick="openTab('contactanos')">Contáctanos</div>
+
+</div>
+
+<div id="inicio" class="tab-content active">
+    <div class="portada">
+        <div>
+            <h1>Bienvenido a Tienda Online TDA</h1>
+            <p>Encuentra los mejores productos y los mejores precios aquí</p>
+        </div>
+    </div>
+    <div class="info-seccion">
+        <h2>¿Por qué elegirnos?</h2>
+        <p>En Tienda Online TDA nos especializamos en ofrecer productos de alta calidad a los mejores precios. Nuestro compromiso es brindarte una experiencia de compra excepcional, con atención personalizada y envío rápido a todo el país.</p>
+        <p>¡No te pierdas de nuestros mejores productos!</p>
+    </div>
+</div>
+
+<div id="productos" class="tab-content">
+    <div class="catalogo">
+        <h2>Audifonos</h2>
+        <img src="Imagenes/audifonos.jpg" alt="Portada del Catálogo 1" onclick="toggleSubcatalogo('subcatalogo1')">
+        <div id="subcatalogo1" class="subcatalogo">
+            <div class="productos">
+                <div class="producto">
+                    <img src="Imagenes/Airpods Max/Airpods Max portada.jpg" alt="Airpods Max">
+                    <h3>Airpods Max</h3>
+                    <p>Precio: $162.000</p>
+                    <button onclick="openProductInfo('infoProducto1')">Más Información</button>
+                </div>
+                <div class="producto">
+                    <img src="producto2.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Precio: $XX.XX</p>
+                    <button onclick="openProductInfo('infoProducto2')">Más Información</button>
+                </div>
+                <!-- Añadir más productos aquí -->
+            </div>
+        </div>
+    </div>
+
+    <div class="catalogo">
+        <h2>Relojes y Cargadores</h2>
+        <img src="Imagenes/reloj.jpg" alt="Portada del Catálogo 2" onclick="toggleSubcatalogo('subcatalogo2')">
+        <div id="subcatalogo2" class="subcatalogo">
+            <div class="productos">
+                <div class="producto">
+                    <img src="producto3.jpg" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $XX.XX</p>
+                    <button onclick="openProductInfo('infoProducto3')">Más Información</button>
+                </div>
+                <div class="producto">
+                    <img src="producto4.jpg" alt="Producto 4">
+                    <h3>Producto 4</h3>
+                    <p>Precio: $XX.XX</p>
+                    <button onclick="openProductInfo('infoProducto4')">Más Información</button>
+                </div>
+                <!-- Añadir más productos aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Añadir más catálogos aquí -->
+</div>
+
+<div id="contactanos" class="tab-content">
+    <div class="contactanos">
+        <h2>Contáctanos</h2>
+        <p>Para más información, por favor contáctanos al correo: <a href="caballero.fernandez.alejandro@gmail.com">caballero.fernandez.alejandro@gmail.com</a></p>
+        <p>También puedes llamarnos al:</p>
+        <a href="https://web.whatsapp.com/">(57)3227764595</a>
+    </div>
+</div>
+
+
+
+<div id="mas-informacion" class="tab-content">
+    <div class="info-seccion">
+        <div class="infoProducto1">
+
+            <h2>Airpods Max</h2>
+
+            <div class="slider">
+                <ul>
+                    <li>
+                        <img src="Imagenes/Airpods Max/Airpods Max portada.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Imagenes/Airpods Max/Airpods Max 1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Imagenes/Airpods Max/Airpods Max2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Imagenes/Airpods Max/Airpods Max 3.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <h2>Detalles adicionales de los productos</h2>
+        <p>Diseñados con una diadema de acero inoxidable, recubierto de plástico y almohadillas de espuma para un ajuste excepcional
+            <br>
+            <br>
+            - Funciones: contestar llamada, cambiar de canción y llamar al asistente de apple
+            <br>
+            - 20 horas aproximadamente de funcionamiento
+            <br>
+            - Estado real de la batería
+            <br>
+            - GPS
+            <br>
+            - Excelente calidad de sonido y micrófono</p>
+    </div>
+</div>
+
+<div class="anuncio" id="anuncio">
+    <p id="anuncioTexto"></p>
+    <button onclick="cerrarAnuncio()">Cerrar</button>
+</div>
+
+<footer>
+    <p><b>&copy; 2024 Tienda Online TDA. Todos los derechos reservados.</b></p>
+    <div class="iconos">
+        <a href="https://www.facebook.com/profile.php?id=61562998439411&ref=xav_ig_profile_web">
+            <img src="Imagenes/facebook.jpg" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/tiendaonlinetda/">
+            <img src="Imagenes/instagram.jpg" alt="instagram">
+        </a>
+    </div>
+
+</footer>
+
+</body>
+</html>
